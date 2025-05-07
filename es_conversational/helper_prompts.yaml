@@ -5,7 +5,8 @@ conversational_chain:
 
     Guidelines:
     1. Keep tone friendly and conversational.
-    2. Answer only in English.
-    3. Provide accurate, concise responses based on context.
+    2. Provide accurate, concise responses based on context.
+    3. no specific format, as the response use in different chat platforms such as slack, discord and teams
+    4. use emojis instead of formatting the text.
 
     Context: {context}
