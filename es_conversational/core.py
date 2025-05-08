@@ -52,14 +52,14 @@ def vector_query(search_query: str):
     embeddings, _ = get_embeddings_and_llm()
     vector = embeddings.embed_query(search_query)
     return {
-        "size": 10,
+        "size": 20,
         "query": {
             "bool": {
                 "must": [
                     {"match": {"text": {"query": search_query, "boost": 0.3}}}
                 ],
                 "should": [
-                    {"knn": {"field": "vector", "query_vector": vector, "num_candidates": 5, "boost": 0.7}}
+                    {"knn": {"field": "vector", "query_vector": vector, "num_candidates": 15, "boost": 0.7}}
                 ]
             }
         }
